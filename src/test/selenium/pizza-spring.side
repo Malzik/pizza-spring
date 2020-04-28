@@ -260,11 +260,11 @@
   }],
   "suites": [{
     "id": "de62685a-3cc4-4e75-9532-8a5b157eaabc",
-    "name": "Default Suite",
+    "name": "pizza-spring",
     "persistSession": false,
     "parallel": false,
     "timeout": 300,
-    "tests": ["65fc4dc3-b32e-41ee-be84-f3ddf4beffdc"]
+    "tests": ["65fc4dc3-b32e-41ee-be84-f3ddf4beffdc", "6862a2a7-0a1c-4f96-b6aa-d3514a9c4c00", "08f8507b-cb49-4cec-83e0-5b11d0ccd311"]
   }],
   "urls": ["http://localhost:8080/"],
   "plugins": []
