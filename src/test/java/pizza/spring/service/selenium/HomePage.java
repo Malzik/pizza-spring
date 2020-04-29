@@ -38,7 +38,7 @@ public class HomePage {
 		return this;
 	}
 
-	public ResultPage clickOnSearch() {
+	public ResultPage clickOnCommander() {
 		WebElement searchButton = webDriver.findElement(By.cssSelector("button"));
 		searchButton.click();
 		return new ResultPage(webDriver);

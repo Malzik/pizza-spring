@@ -9,7 +9,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
-public class PizzaSpringCommandeTest {
+public class PizzaSpringCommandeAcceptanceTest {
 
 	private WebDriver webDriver;
 
@@ -29,7 +29,7 @@ public class PizzaSpringCommandeTest {
 										.selectPizza("pizzaId", "//option[. = 'Margherita']")
 				                        .enterKeywords("nom", "test")
 				                        .enterKeywords("telephone", "0123456789")
-				                        .clickOnSearch();
+				                        .clickOnCommander();
 
 		assertTrue(resultPage.isIdPresent("recap-commande"));
 	}
@@ -39,7 +39,7 @@ public class PizzaSpringCommandeTest {
 		ResultPage resultPage = HomePage.openWith(webDriver)
 				.enterKeywords("nom", "test")
 				.enterKeywords("telephone", "0123456789")
-				.clickOnSearch();
+				.clickOnCommander();
 
 		assertTrue(resultPage.isIdPresent("pizzaId.errors"));
 		assertEquals("Vous devez choisir au moins une pizza", resultPage.getValueForId("pizzaId.errors"));
@@ -50,7 +50,7 @@ public class PizzaSpringCommandeTest {
 		ResultPage resultPage = HomePage.openWith(webDriver)
 				.selectPizza("pizzaId", "//option[. = 'Margherita']")
 				.enterKeywords("nom", "test")
-				.clickOnSearch();
+				.clickOnCommander();
 
 		assertTrue(resultPage.isIdPresent("telephone.errors"));
 		assertEquals("ne peut pas être vide", resultPage.getValueForId("telephone.errors"));
